@@ -1,6 +1,9 @@
-require("./memory.js");
+const main = require("./main.js");
 
-export default class Array {
+require("./memory.js");
+require("./main.js");
+
+class Array {
   // First I tried to structure this for props, before
   // realizing it was unnecessary.
   constructor() {
@@ -54,4 +57,7 @@ export default class Array {
     this._capacity = size;
   }
 }
-Array.SIZE_RATIO = 2.5
+main()
+Array.SIZE_RATIO = 2.5;
+
+module.exports = Array
